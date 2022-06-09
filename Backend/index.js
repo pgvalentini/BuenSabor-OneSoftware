@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const apiRouter = require('./routes/api');
+const { Insumo, Producto, RubroInsumo, RubroProducto } = require('./db');
+
 
 const app = express();
 
@@ -22,3 +24,4 @@ app.use('/api', apiRouter);
 app.listen(3002, () => {
     console.log("Servidor arrancado")
 });
+
