@@ -1,6 +1,6 @@
 # BuenSabor-OneSoftware
 
-Instrucciones:
+INSTRUCCIONES:
 1. Crear en MySql una base de datos llamada "elbuensaborini"
 2. Descomprimir Backend
 3. Abrirlo en Visual Studio Code
@@ -14,13 +14,14 @@ El backend se ejecutará en localhost:3002 según lo especificado en línea 22 d
 npm install (para instalar los módulos)
 ng serve -o (para levantar)
 
+<br>
 
-COMENTARIOS
+COMENTARIOS <br>
 Se presenta el primer entregable con los siguientes módulos funcionales:
--Insumos
--Productos
--Rubro Insumo
--Rubro Producto
+<br>-Insumos
+<br>-Productos
+<br>-Rubro Insumo
+<br>-Rubro Producto
 
 Se presenta una vista que incluyen los módulos funcionales y un adelanto de los otros módulos que se irán implementando en la parte de administración, ya que es la parte del proyecto que más funcionalidades tiene (prestar atención a la NavBar, la cual puede que se cambie a una vista lateral izquierda, pero la funcionalidad será la misma, poder acceder a todos los módulos de administración desde la misma, facilitando la navegación).
 
