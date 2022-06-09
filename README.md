@@ -17,11 +17,15 @@ ng serve -o (para levantar)
 
 COMENTARIOS
 Se presenta el primer entregable con los siguientes módulos funcionales:
-*Insumos
-*Productos
-*Rubro Insumo
-*Rubro Producto
+-Insumos
+-Productos
+-Rubro Insumo
+-Rubro Producto
 
-Se presenta una vista del componente con un adelanto de los otros módulos que se irán implementando en la parte de administración, ya que es la parte del proyecto que más funcionalidades tiene (prestar atención a la NavBar, la cual puede que se cambie a una vista lateral izquierda, pero la funcionalidad será la misma, poder acceder a todos los módulos de administración desde la misma, facilitando la navegación).
+Se presenta una vista que incluyen los módulos funcionales y un adelanto de los otros módulos que se irán implementando en la parte de administración, ya que es la parte del proyecto que más funcionalidades tiene (prestar atención a la NavBar, la cual puede que se cambie a una vista lateral izquierda, pero la funcionalidad será la misma, poder acceder a todos los módulos de administración desde la misma, facilitando la navegación).
 
-Se adelanta el modelo final de la base de datos (en la carpeta BBDD), junto a los scripts para la creación de todas las tablas, el llenado de tablas mediante datos para ir probando su correcta funcionalidad conforme se vaya avanzando en los módulos desde el Frontend y el Backend y la imagen para una correcta interpretación de la misma.
+Se adelanta el modelo final de la base de datos (en la carpeta BBDD), junto a los scripts para la creación de todas las tablas, el llenado de tablas mediante datos para ir probando su correcta funcionalidad conforme se vaya avanzando en los módulos desde el Frontend y el Backend y la imagen para una correcta interpretación de la misma. Próximamente se mejorará la forma de la integración de la BBDD al proyecto en general.
+
+Se irán migrando las funcionalidades referidas al manejo de la BBDD desde consultas SQL hacia Sequelize para mejorar la agilidad.
+
+Se mejorará el diseño de las vistas y se creará (ficticiamente) una marca propia de El Buen Sabor para integrarla a la página.
