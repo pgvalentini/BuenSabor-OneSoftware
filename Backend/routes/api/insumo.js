@@ -20,6 +20,39 @@ router.get('/:insumoId', async (req, res) => {
     res.json(insumo);
 });
 
+/*
+{
+    "id": 1,
+    "denominacion": "Coca Cola 1.5 l",
+    "rubro": "Bebida sin alcohol",
+    "stockActual": 15,
+    "stockMinimo": 10,
+    "unidadMedida": "unidad",
+    "esInsumo": false,
+    "alta": false,
+    "precio": "125",
+    "imagen": "https://st3.depositphotos.com/1029150/13893/i/1600/depositphotos_138936316-stock-photo-1-5l-coca-cola-drink.jpg",
+    "createdAt": "2020-05-04T00:00:00.000Z",
+    "updatedAt": "2022-06-09T01:31:05.000Z"
+  }
+*/
+
+//Prueba insertar registro automáticamente yendo a esa ruta
+/* router.apply('/registro', function(res) {
+    Insumo.create({
+        "denominacion": "Coca Cola 1.5 l",
+        "rubro": "Bebida sin alcohol",
+        "stockActual": 15,
+        "stockMinimo": 10,
+        "unidadMedida": "unidad",
+        "esInsumo": false,
+        "alta": false,
+        "precio": "125",
+        "imagen": "https://st3.depositphotos.com/1029150/13893/i/1600/depositphotos_138936316-stock-photo-1-5l-coca-cola-drink.jpg"
+        });
+    res.send('registro creado');
+}); */
+
 
 //Da de alta un nuevo insumo
 router.post('/', async (req, res) => {
