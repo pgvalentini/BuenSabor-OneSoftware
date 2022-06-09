@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Denominación</th>
+            <th scope="col">Rubro</th>
+            <th scope="col">Stock Actual</th>
+            <th scope="col">Stock Minimo</th>
+            <th scope="col">Unidad Medida</th>
+            <th scope="col">Es insumo</th>
+            <th scope="col">Activo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Imagen</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let insumoAux of insumo; let i = index">
+        <tr>
+            <th scope="row">{{insumoAux.id}}</th>
+            <th scope="row">{{insumoAux.denominacion}}</th>
+            <th scope="row">{{insumoAux.rubro}}</th>
+            <th scope="row">{{insumoAux.stockActual}}</th>
+            <th scope="row">{{insumoAux.stockMinimo}}</th>
+            <th scope="row">{{insumoAux.unidadMedida}}</th>
+            <th scope="row">{{insumoAux.esInsumo}}</th>
+            <th scope="row">{{insumoAux.alta}}</th>
+            <th scope="row">{{insumoAux.precio}}</th>
+            <th scope="row">{{insumoAux.imagen}}</th>
+        </tr>
+    </tbody>
+</table>
