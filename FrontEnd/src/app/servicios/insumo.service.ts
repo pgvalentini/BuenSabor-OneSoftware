@@ -21,4 +21,14 @@ export class InsumoService {
         map( (insumoData: any) => insumoData));
     }
 
-}
+    getInsumoXId(idInsumo: number){
+      return this.http.get("http://localhost:3002/api/insumo/"+idInsumo).pipe(
+        map( (insumoData: any) => insumoData));
+    }
+
+    setInsumo(insumo: insumo) {
+      return this.http.post(`${this.url}/agregar`, insumo);
+    }
+
+
+  }

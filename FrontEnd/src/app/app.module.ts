@@ -8,6 +8,8 @@ import { InsumoComponent } from './components/insumo/insumo.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from "@angular/common/http";
+import { InsumoAdminComponent } from './components/admin/insumo-admin/insumo-admin.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { HttpClientModule } from "@angular/common/http";
     HomeComponent,
     InsumoComponent,
     ProductoComponent,
+    InsumoAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
