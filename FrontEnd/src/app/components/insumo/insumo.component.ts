@@ -30,4 +30,11 @@ export class InsumoComponent implements OnInit {
     });
   }
 
+  delete(idInsumo:string){
+    var opcion = confirm("Esta seguro que desea eliminar el plato?");
+    if (opcion == true) {
+      this.servicioInsumo.deleteInsumo(idInsumo);
+      location.reload();
+    }
+  }
 }

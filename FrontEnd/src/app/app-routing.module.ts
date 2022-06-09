@@ -8,7 +8,7 @@ import { ProductoComponent } from './components/producto/producto.component';
 const routes: Routes = [ 
   { path: 'home', component: HomeComponent },
   { path: 'insumos', component: InsumoComponent },
-  { path: 'insumo-admin', component: InsumoAdminComponent },
+  { path: 'insumo-admin/:id', component: InsumoAdminComponent },
   { path: 'productos', component: ProductoComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' } ];
 

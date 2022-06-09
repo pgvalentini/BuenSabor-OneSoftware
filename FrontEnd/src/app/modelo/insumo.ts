@@ -1,5 +1,5 @@
 export class insumo{
-    id: number = 0;
+    id: number =0;
     denominacion: string = "";
     rubro: string = "";
     stockActual: number = 0;

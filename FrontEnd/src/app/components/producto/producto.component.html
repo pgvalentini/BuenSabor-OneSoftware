@@ -1,10 +1,29 @@
 <h1>Nuestros Platos</h1>
-<div class="card-deck">
-    <div class="card" style="max-width: 25%; padding: 10px;"> <img class="card-img-top" src="assets/img/pizza-especial.jpg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Pizza Especial</h5>
-            <p class="card-text">$ 120</p>
-        </div>
-        <div class="card-footer" style="text-align: center;"> <a href="#" class="btn btn-primary" style="width: 90%;">Detalle</a> </div>
-    </div>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Denominación</th>
+            <th scope="col">Rubro</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Receta</th>
+            <th scope="col">Rubro</th>
+            <th scope="col">Tiempo Cocina</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let productoAux of producto; let i = index">
+        <tr>
+            <th scope="row">{{productoAux.id}}</th>
+            <th scope="row">{{productoAux.denominacion}}</th>
+            <th scope="row">{{productoAux.rubro}}</th>
+            <th scope="row">{{productoAux.descripcion}}</th>
+            <th scope="row">{{productoAux.imagen}}</th>
+            <th scope="row">{{productoAux.precio}}</th>
+            <th scope="row">{{productoAux.receta}}</th>
+            <th scope="row">{{productoAux.rubro}}</th>
+            <th scope="row">{{productoAux.tiempoCocina}}</th>
+        </tr>
+    </tbody>
+</table>

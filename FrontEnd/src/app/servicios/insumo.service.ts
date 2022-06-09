@@ -17,18 +17,25 @@ export class InsumoService {
    }
 
     getInsumo(){
-      return this.http.get("http://localhost:3002/api/insumo").pipe(
+      return this.http.get(`${this.url}/insumo`).pipe(
         map( (insumoData: any) => insumoData));
     }
 
     getInsumoXId(idInsumo: number){
-      return this.http.get("http://localhost:3002/api/insumo/"+idInsumo).pipe(
+      return this.http.get(`${this.url}/insumo/${idInsumo}`).pipe(
         map( (insumoData: any) => insumoData));
     }
 
-    setInsumo(insumo: insumo) {
-      return this.http.post(`${this.url}/agregar`, insumo);
+    setInsumo(insumo:insumo){
+      return this.http.post(`${this.url}/insumo`,insumo);
     }
 
+    updateInsumo(insumo:insumo){
+      return this.http.put(`${this.url}/insumo/id`,insumo);
+    }
+    
+    deleteInsumo(idInsumo: string){
+      return this.http.put(`${this.url}/insumo/baja/${idInsumo}`,insumo);
+    }
 
-  }
+}

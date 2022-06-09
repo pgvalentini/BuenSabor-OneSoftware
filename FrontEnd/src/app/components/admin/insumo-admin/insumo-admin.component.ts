@@ -11,78 +11,83 @@ import { InsumoService } from 'src/app/servicios/insumo.service';
 })
 export class InsumoAdminComponent implements OnInit {
 
-  insumo: insumo = {
+  insumo:insumo = {
     id: 0,
-    denominacion: '',
-    rubro: '',
+    denominacion: "",
+    precio: 0,
+    rubro: "",
+    imagen: "",
     stockActual: 0,
     stockMinimo: 0,
     unidadMedida: '',
     esInsumo: false,
-    alta: true,
-    precio: 0,
-    imagen: ''
-  }
-
+    alta: true
+  };
   new = false;
   idInsumo: number = 0;
+  resultadoOperacion = "";
 
-  constructor(private servicioInsumo: InsumoService, private router: Router, private activeRoute: ActivatedRoute) {
-    this.activeRoute.params.subscribe(
+  constructor(private servicioInsumo:InsumoService, private router:Router, private activeRoute:ActivatedRoute) {
+    this.activeRoute.params
+    .subscribe(
       parametros => {
         this.idInsumo = parametros['id'];
-        if (this.idInsumo > 0) {
+        console.log(this.idInsumo);
+        if(this.idInsumo > 0){
           servicioInsumo.getInsumoXId(this.idInsumo)
-            .subscribe(insumoEncontrado => this.insumo = insumoEncontrado as insumo);
-        } else {
+          .subscribe(insumoEncontrado => this.insumo = insumoEncontrado as insumo);
+        }else{
           console.log("ES NUEVO");
         }
       }
     );
+
   }
 
-
   ngOnInit() {
+
   }
 
   save() {
     if (this.idInsumo == 0) {
       console.log('nuevo');
       this.servicioInsumo.setInsumo(this.insumo)
-        .subscribe((data: any) => {
-          if (data && data.id) {
-            this.router.navigate(['/insumo-admin/' + data.id]);
+        .subscribe( (data: any) => {
+          console.log(data);
+          if(data && data.id){
+            this.router.navigate(['/insumo']);
           }
         },
-          error => console.error(error));
+        error => console.error(error));
     } else {
-      /*
-      console.log(`Update ${this.idInsumo}`);
-      this.servicioInsumo.updateInsumo(this.idInsumo)
-        .subscribe((data: any) => {
-          if (data && data.id) {
+      console.log(`Update ${ this.idInsumo }`);
+      this.servicioInsumo.updateInsumo(this.insumo)
+      .subscribe( (data: any) => {
+        console.log(data);
+        if(data && data.id){
+            this.router.navigate(['/insumo']);
             console.log(data);
           }
         },
-          error => console.error(error));
+        error => console.error(error));
     }
-    */
   }
-/*
+
+
   addNew(formu: NgForm) {
-    this.router.navigate(['/insumo-admin/0']);
+    this.router.navigate(['/insumo-admin']);
     formu.reset({
       id: 0,
-      denominacion: '',
-      rubro: '',
+      denominacion: "",
+      precio: 0,
+      rubro: "",
+      imagen: "",
       stockActual: 0,
       stockMinimo: 0,
       unidadMedida: '',
       esInsumo: false,
-      alta: true,
-      precio: 0,
-      imagen: ''
+      alta: true
     });
-    */
   }
+
 }
