@@ -4,7 +4,8 @@ INSTRUCCIONES:
 1. Crear en MySql una base de datos llamada "elbuensaborini"
 2. Descomprimir Backend
 3. Abrirlo en Visual Studio Code
-4. Abrir el archivo "db.js" alojado en la base del proyecto.
+4. Correr el comando "npm install" para instalar los módulos.
+5. Abrir el archivo "db.js" alojado en la base del proyecto.
    En la línea 10, donde dice 'root' 'root' cambiar por el user (el primer root) y el password (en el segundo root) que se utilice para la base de datos.
 5. En la línea 17 y 18 hacer lo mismo.
 6. Correr el comando "node index.js"
