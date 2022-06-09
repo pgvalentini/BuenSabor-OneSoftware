@@ -10,6 +10,7 @@ INSTRUCCIONES:
 5. En la línea 17 y 18 hacer lo mismo.
 6. Correr el comando "node index.js"
 Esto creará las tablas automáticamente y las rutas estarán disponibles para su uso.
+Añadido: También hemos automatizado la inserción de datos de ejemplo en las tablas para que se vea su correcto funcionamiento.
 El backend se ejecutará en localhost:3002 según lo especificado en línea 22 del archivo "index.js", para evitar conflictos con otras tecnologías frontend que corren por defecto en puerto 3000.
 7. Bajar y correr Frontend con las siguientes instrucciones:
 npm install (para instalar los módulos)
