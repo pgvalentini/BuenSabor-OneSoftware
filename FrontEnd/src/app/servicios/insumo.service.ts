@@ -31,11 +31,20 @@ export class InsumoService {
     }
 
     updateInsumo(insumo:insumo){
-      return this.http.put(`${this.url}/insumo/id`,insumo);
-    }
-    
-    deleteInsumo(idInsumo: string){
-      return this.http.put(`${this.url}/insumo/baja/${idInsumo}`,insumo);
+      return this.http.put(`${this.url}/insumo/`+insumo.id,insumo);
     }
 
+    async deleteInsumo(id:number){
+      console.log("Baja Insumo ID " + id);
+      let urlServer = `${this.url}/insumo/baja/`+ id;
+      await fetch(urlServer, {
+        method: 'PUT',
+            headers: {
+          'Content-type': 'application/json',
+          'Access-Control-Allow-Origin':'*'
+        },
+            mode: 'cors'
+      });
+    }
+    
 }
