@@ -5,7 +5,6 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
         <ul class="navbar-nav mr-auto">
             <li class="nav-item " routerLinkActive="active">
                 <a class="nav-link" [routerLink]="['home']">Home</a>
@@ -14,35 +13,13 @@
                 <a class="nav-link" [routerLink]="['insumos']">Insumos</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" [routerLink]="['rubroInsumos']">Rubro Insumo</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" [routerLink]="['productos']">Productos</a>
             </li>
-
-        </ul>
-
-        <ul class="navbar-nav ">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" routerLinkActive="active" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Administrar
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" routerLink="admin/rgeneral">Rubro General</a>
-                    <a class="dropdown-item" routerLink="admin/rarticulo">Rubro Articulo</a>
-                    <a class="dropdown-item" routerLink="admin/insumo">Articulo Insumo</a>
-                    <a class="dropdown-item" routerLink="admin/manufacturado">Articulo Manufacturado</a>
-                    <a class="dropdown-item" [routerLink]="['home']">Usuarios</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Estadistica
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" [routerLink]="['home']">Stock Minimo</a>
-                    <a class="dropdown-item" [routerLink]="['home']">Ingresos</a>
-                    <a class="dropdown-item" [routerLink]="['home']">Mas pedidas</a>
-                    <a class="dropdown-item" [routerLink]="['home']">Pedidos Cliente</a>
-
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="['rubroProductos']">Rubro Productos</a>
             </li>
             <li class="nav-item " routerLinkActive="active">
                 <a class="nav-link" [routerLink]="['home']">Comercio Electrónico</a>

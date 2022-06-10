@@ -1,6 +1,6 @@
 <h1>Nuestros Insumos</h1>
 <button [routerLink]="['/insumo-admin/0']" type="button" class="btn btn-outline-primary" type="button" name="button">
-      Nuevo plato
+      Nuevo Insumo
 </button>
 
 <table class="table">
@@ -31,9 +31,6 @@
             <th scope="row">{{insumoAux.precio}}</th>
             <th scope="row">{{insumoAux.imagen}}</th>
             <td class="text-right w120">
-                <button [routerLink]="['/detalleInsumo/'+insumoAux.id]" type="button" class="btn btn-outline-primary" type="button" name="button">
-                <i class="fas fa-edit"></i> Detalle
-            </button>&nbsp;&nbsp;
                 <button [routerLink]="['/insumo-admin/'+insumoAux.id]" type="button" class="btn btn-outline-success" type="button" name="button">
                   <i class="fas fa-edit"></i> Editar
             </button>&nbsp;&nbsp;

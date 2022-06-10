@@ -21,4 +21,29 @@ export class ProductoService {
         map( (productoData: any) => productoData));
     }
 
+    getProductoXId(idProducto: number){
+      return this.http.get(`${this.url}/producto/${idProducto}`).pipe(
+        map( (productoData: any) => productoData));
+    }
+
+    setProducto(producto:producto){
+      return this.http.post(`${this.url}/producto`,producto);
+    }
+
+    updateProducto(producto:producto){
+      return this.http.put(`${this.url}/producto/`+producto.id,producto);
+    }
+
+    async deleteProducto(id:number){
+      console.log("Baja Producto ID " + id);
+      let urlServer = `${this.url}/producto/baja/`+ id;
+      await fetch(urlServer, {
+        method: 'PUT',
+            headers: {
+          'Content-type': 'application/json',
+          'Access-Control-Allow-Origin':'*'
+        },
+            mode: 'cors'
+      });
+    }
 }

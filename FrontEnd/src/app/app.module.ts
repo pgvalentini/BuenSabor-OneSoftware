@@ -9,7 +9,12 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from "@angular/common/http";
 import { InsumoAdminComponent } from './components/admin/insumo-admin/insumo-admin.component';
+import { ProductoAdminComponent } from './components/admin/producto-admin/producto-admin.component';
 import { FormsModule } from '@angular/forms';
+import { RubroInsumoComponent } from './components/rubro-insumo/rubro-insumo.component';
+import { RubroProductoComponent } from './components/rubro-producto/rubro-producto.component';
+import { RubroInsumoAdminComponent } from './components/admin/rubro-insumo-admin/rubro-insumo-admin.component';
+import { RubroProductoAdminComponent } from './components/admin/rubro-producto-admin/rubro-producto-admin.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,11 @@ import { FormsModule } from '@angular/forms';
     InsumoComponent,
     ProductoComponent,
     InsumoAdminComponent,
+    ProductoAdminComponent,
+    RubroInsumoComponent,
+    RubroProductoComponent,
+    RubroInsumoAdminComponent,
+    RubroProductoAdminComponent,
   ],
   imports: [
     BrowserModule,
