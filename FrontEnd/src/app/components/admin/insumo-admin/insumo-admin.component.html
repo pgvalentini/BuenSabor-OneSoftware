@@ -1,0 +1,51 @@
+<h3>Insumo<small>{{ insumo.denominacion }}</small></h3>
+    <button class="btn btn-outlinedanger" [routerLink]="['/insumo']">Regresar</button>
+    <button class="btn btn-outlinesuccess" (click)="addNew(forma)">Nuevo Insumo</button>
+<hr>
+<div class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <form (ngSubmit)="save()" #forma="ngForm">
+            <div class="form-group">
+                <label for="denominacion">Denominacion</label>
+                <input id="denominacion" [(ngModel)]="insumo.denominacion" name="denominacion" class="form-control" required minlength="4" placeholder="insumo">
+            </div>
+            <div class="form-group">
+                <label for="rubro">Rubro</label>
+                <input id="rubro" [(ngModel)]="insumo.rubro" name="rubro" class="form-control" required minlength="4" placeholder="Rubro">
+            </div>
+            <div class="form-group">
+                <label for="stockActual">Stock Actual</label>
+                <input id="stockActual" [(ngModel)]="insumo.stockActual" name="stockActual" class="form-control" required minlength="4" placeholder="stockActual">
+            </div>
+            <div class="form-group">
+                <label for="stockMinimo">Stock Mínimo</label>
+                <input id="stockMinimo" [(ngModel)]="insumo.stockMinimo" name="stockMinimo" class="form-control" required minlength="4" placeholder="stockMinimo">
+            </div>
+            <div class="form-group">
+                <label for="unidadMedida">Unidad medida</label>
+                <input id="unidadMedida" [(ngModel)]="insumo.unidadMedida" name="unidadMedida" class="form-control" required minlength="4" placeholder="unidadMedida">
+            </div>
+            <div class="form-group">
+                <label for="esInsumo">Es insumo</label>
+                <input id="esInsumo" [(ngModel)]="insumo.esInsumo" name="esInsumo" class="form-control" required minlength="4" placeholder="esInsumo">
+            </div>
+            <div class="form-group">
+                <label for="alta">Alta</label>
+                <input id="alta" [(ngModel)]="insumo.alta" name="alta" class="form-control" required minlength="4" placeholder="alta">
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio</label>
+                <input id="precio" [(ngModel)]="insumo.precio" name="precio" class="form-control" required minlength="4" placeholder="Precio">
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen</label>
+                <input id="imagen" [(ngModel)]="insumo.imagen" name="imagen"
+            class="form-control" required minlength="4" placeholder="Imagen">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outlineprimary">Guardar Insumo</button>
+            </div>
+        </form>
+    </div>
+</div>
+

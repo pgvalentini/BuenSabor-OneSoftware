@@ -7,7 +7,7 @@ const modeloRubroProducto = require('./models/rubroproducto');
 
 var mysql = require('mysql');
 
-const sequelize = new Sequelize('elbuensaborini', 'root', 'root', {
+const sequelize = new Sequelize('elbuensaborini', 'root', '', {
     host: 'localhost',
     dialect: 'mysql',
 });
@@ -15,7 +15,7 @@ const sequelize = new Sequelize('elbuensaborini', 'root', 'root', {
 var mysql = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "root",
+    password: "",
     database: "elbuensaborini"
   });
 

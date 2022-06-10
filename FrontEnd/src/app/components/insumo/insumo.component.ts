@@ -15,7 +15,6 @@ export class InsumoComponent implements OnInit {
   insumo: insumo[] = [];
   loading = true;
 
-
   constructor(private servicioInsumo:InsumoService, private router:Router, private modalService: NgbModal) { }
 
   ngOnInit() {
@@ -30,4 +29,11 @@ export class InsumoComponent implements OnInit {
     });
   }
 
+  delete(idInsumo:number){
+    var opcion = confirm("Esta seguro que desea eliminar el plato?");
+    if (opcion == true) {
+      this.servicioInsumo.deleteInsumo(idInsumo);
+      location.reload();
+    }
+  }
 }
