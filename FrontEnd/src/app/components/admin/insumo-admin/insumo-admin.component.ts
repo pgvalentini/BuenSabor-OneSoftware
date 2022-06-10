@@ -55,7 +55,7 @@ export class InsumoAdminComponent implements OnInit {
         .subscribe( (data: any) => {
           console.log(data);
           if(data && data.id){
-            this.router.navigate(['/insumo']);
+            this.router.navigate(['/insumos']);
           }
         },
         error => console.error(error));
@@ -63,10 +63,8 @@ export class InsumoAdminComponent implements OnInit {
       console.log(`Update ${ this.idInsumo }`);
       this.servicioInsumo.updateInsumo(this.insumo)
       .subscribe( (data: any) => {
-        console.log(data);
-        if(data && data.id){
-            this.router.navigate(['/insumo']);
-            console.log(data);
+        if(data){
+            this.router.navigate(['/insumos']);
           }
         },
         error => console.error(error));

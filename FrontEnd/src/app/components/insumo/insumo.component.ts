@@ -30,7 +30,7 @@ export class InsumoComponent implements OnInit {
   }
 
   delete(idInsumo:number){
-    var opcion = confirm("Esta seguro que desea eliminar el plato?");
+    var opcion = confirm("Esta seguro que desea eliminar el insumo?");
     if (opcion == true) {
       this.servicioInsumo.deleteInsumo(idInsumo);
       location.reload();

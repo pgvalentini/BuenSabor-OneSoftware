@@ -1,6 +1,4 @@
-<h3>Insumo<small>{{ insumo.denominacion }}</small></h3>
-    <button class="btn btn-outlinedanger" [routerLink]="['/insumo']">Regresar</button>
-    <button class="btn btn-outlinesuccess" (click)="addNew(forma)">Nuevo Insumo</button>
+<h3>Insumo <small>{{ insumo.denominacion }}</small></h3>
 <hr>
 <div class="row animated fadeIn fast">
     <div class="col-md-12">
@@ -39,8 +37,7 @@
             </div>
             <div class="form-group">
                 <label for="imagen">Imagen</label>
-                <input id="imagen" [(ngModel)]="insumo.imagen" name="imagen"
-            class="form-control" required minlength="4" placeholder="Imagen">
+                <input id="imagen" [(ngModel)]="insumo.imagen" name="imagen" class="form-control" required minlength="4" placeholder="Imagen">
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-outlineprimary">Guardar Insumo</button>
@@ -48,4 +45,3 @@
         </form>
     </div>
 </div>
-

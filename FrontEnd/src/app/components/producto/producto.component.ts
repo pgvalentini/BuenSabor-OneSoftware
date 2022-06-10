@@ -28,4 +28,12 @@ export class ProductoComponent implements OnInit {
       this.loading = false;
     });
   }
+
+  delete(idProducto:number){
+    var opcion = confirm("Esta seguro que desea eliminar el producto?");
+    if (opcion == true) {
+      this.servicioProducto.deleteProducto(idProducto);
+      location.reload();
+    }
+  }
 }

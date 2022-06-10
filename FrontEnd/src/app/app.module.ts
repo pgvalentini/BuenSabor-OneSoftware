@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from "@angular/common/http";
 import { InsumoAdminComponent } from './components/admin/insumo-admin/insumo-admin.component';
 import { FormsModule } from '@angular/forms';
+import { ProductoAdminComponent } from './components/admin/producto-admin/producto-admin.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     InsumoComponent,
     ProductoComponent,
     InsumoAdminComponent,
+    ProductoAdminComponent,
   ],
   imports: [
     BrowserModule,
