@@ -1,4 +1,4 @@
-<h1>Nuestros Platos</h1>
+<h1>Nuestros Productos</h1>
 <button [routerLink]="['/producto-admin/0']" type="button" class="btn btn-outline-primary" type="button" name="button">
     Nuevo Producto
 </button>
@@ -14,7 +14,6 @@
             <th scope="col">Imagen</th>
             <th scope="col">Precio</th>
             <th scope="col">Receta</th>
-
         </tr>
     </thead>
     <tbody *ngFor="let productoAux of producto; let i = index">
@@ -30,9 +29,7 @@
             <th scope="row">{{productoAux.receta}}</th>
 
             <td class="text-right w120">
-                <button [routerLink]="['/detalleProducto/'+productoAux.id]" type="button" class="btn btn-outline-primary" type="button" name="button">
-                <i class="fas fa-edit"></i> Detalle
-            </button>&nbsp;&nbsp;
+
                 <button [routerLink]="['/producto-admin/'+productoAux.id]" type="button" class="btn btn-outline-success" type="button" name="button">
                   <i class="fas fa-edit"></i> Editar
             </button>&nbsp;&nbsp;

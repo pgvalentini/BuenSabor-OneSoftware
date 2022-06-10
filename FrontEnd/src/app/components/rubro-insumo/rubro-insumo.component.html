@@ -1,0 +1,28 @@
+<h1>Nuestros Rubros Insumos</h1>
+<button [routerLink]="['/rubroInsumo-admin/0']" type="button" class="btn btn-outline-primary" type="button" name="button">
+    Nuevo Rubro Insumo
+</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Denominación</th>
+            <th scope="col">Alta</th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let rubroInsumoAux of rubroInsumo; let i = index">
+        <tr>
+            <th scope="row">{{rubroInsumoAux.id}}</th>
+            <th scope="row">{{rubroInsumoAux.denominacion}}</th>
+            <th scope="row">{{rubroInsumoAux.alta}}</th>
+            <td class="text-right w120">
+                <button [routerLink]="['/rubroInsumo-admin/'+rubroInsumoAux.id]" type="button" class="btn btn-outline-success" type="button" name="button">
+                  <i class="fas fa-edit"></i> Editar
+            </button>&nbsp;&nbsp;
+                <button (click)="delete(rubroInsumoAux.id)" type="button" class="btn btn-outline-danger" type="button" name="button">
+                  <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
