@@ -1,29 +1,17 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
     <a class="navbar-brand" href="">El buen sabor</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item " routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['home']">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['insumos']">Insumos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['rubroInsumos']">Rubro Insumo</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['productos']">Productos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" [routerLink]="['rubroProductos']">Rubro Productos</a>
-            </li>
-            <li class="nav-item " routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['home']">Comercio Electrónico</a>
-            </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['home']">Home</a>
+            <a class="nav-item nav-link" [routerLink]="['insumos']">Insumos</a>
+            <a class="nav-item nav-link" [routerLink]="['rubroInsumos']">Rubro Insumo</a>
+            <a class="nav-item nav-link" [routerLink]="['productos']">Productos</a>
+            <a class="nav-item nav-link" [routerLink]="['rubroProductos']">Rubro Productos</a>
+            <a class="nav-item nav-link" [routerLink]="['platos']">Comercio Electrónico</a>
+        </div>
     </div>
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm2" type="search" placeholder="Buscar Plato" arialabel="Buscar Plato" #buscarTexto>
+        <button (click)="buscarPlatos(buscarTexto.value)" class="btn btn-outlinesuccess my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
 </nav>

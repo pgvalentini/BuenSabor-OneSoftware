@@ -29,13 +29,12 @@
             <th scope="row">{{productoAux.receta}}</th>
 
             <td class="text-right w120">
-
                 <button [routerLink]="['/producto-admin/'+productoAux.id]" type="button" class="btn btn-outline-success" type="button" name="button">
                   <i class="fas fa-edit"></i> Editar
-            </button>&nbsp;&nbsp;
+                </button>&nbsp;&nbsp;
                 <button (click)="delete(productoAux.id)" type="button" class="btn btn-outline-danger" type="button" name="button">
                   <i class="fas fa-trash-alt"></i> Eliminar
-            </button>
+                </button>
             </td>
         </tr>
     </tbody>

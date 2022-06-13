@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { producto } from '../modelo/producto';
 import {map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,7 @@ export class ProductoService {
     }
 
     getProductoXId(idProducto: number){
+      console.log(`${this.url}/producto/${idProducto}`);
       return this.http.get(`${this.url}/producto/${idProducto}`).pipe(
         map( (productoData: any) => productoData));
     }
@@ -46,4 +48,39 @@ export class ProductoService {
             mode: 'cors'
       });
     }
+
+    //lee todos los platos
+    getProductoFromDataBase(): Observable<producto[]>{
+      return this.http.get(`${this.url}/producto`).pipe(
+        map( (productoData: any) => productoData));
+    }
+
+
+    //busca un plato por el id
+    getProductoEnBaseDatosXId(idx:string): Observable<producto>{
+      return this.http.get<producto>((`${this.url}/producto`) + idx);
+    }
+
+    //busca los instrumentos por un termino de busqueda
+    getProductoBusquedaFromDataBase(termino:string): Observable<producto[]>{
+      return this.http.get<producto[]>((`${this.url}/producto/buscar/`) + termino);
+    }
+
+
+
+/*
+  public buscarPlatos(termino: string): any[] {
+    let platosArr: any[] = [];
+    termino = termino.toLowerCase();
+    this.productoData = this.getProducto();
+    for (let plato of this.productoData) {
+      let nombre = plato.denominacion.toLowerCase();
+      if (nombre.indexOf(termino) >= 0) {
+        platosArr.push(plato);
+      }
+    }
+    return platosArr;
+  }
+  */
+      
 }

@@ -1,0 +1,16 @@
+<h1>{{plato?.denominacion | uppercase}}</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4" style="text-align: center">
+        <img src={{plato?.imagen}} style="maxwidth: 300px;" class="img-fluid">
+        <br><br>
+        <a [routerLink]="['/platos']" class="btn btn-outline-danger btnblock">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3 style="color: crimson">{{plato?.denominacion}}</h3>
+        <hr>
+        <p>{{plato?.denominacion}}</p>
+        <p><b>Precio:</b> ${{plato?.precio}}</p>
+        <p><b>Rubro:</b> {{plato?.rubro}}</p>
+    </div>
+</div>

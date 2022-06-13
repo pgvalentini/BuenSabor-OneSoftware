@@ -4,8 +4,11 @@ import { InsumoAdminComponent } from './components/admin/insumo-admin/insumo-adm
 import { ProductoAdminComponent } from './components/admin/producto-admin/producto-admin.component';
 import { RubroInsumoAdminComponent } from './components/admin/rubro-insumo-admin/rubro-insumo-admin.component';
 import { RubroProductoAdminComponent } from './components/admin/rubro-producto-admin/rubro-producto-admin.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.component';
 import { HomeComponent } from './components/home/home.component';
 import { InsumoComponent } from './components/insumo/insumo.component';
+import { PlatosComponent } from './components/platos/platos.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { RubroInsumoComponent } from './components/rubro-insumo/rubro-insumo.component';
 import { RubroProductoComponent } from './components/rubro-producto/rubro-producto.component';
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: 'rubroProducto-admin/:id', component: RubroProductoAdminComponent },
   { path: 'rubroInsumos', component: RubroInsumoComponent },
   { path: 'rubroInsumo-admin/:id', component: RubroInsumoAdminComponent },
+  { path: 'platos', component: PlatosComponent },
+  { path: 'detallePlato/:id', component: DetallePlatoComponent },
+  { path: 'buscar/:termino', component: BuscadorComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' } ];
 
 @NgModule({

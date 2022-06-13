@@ -15,6 +15,10 @@ import { RubroInsumoComponent } from './components/rubro-insumo/rubro-insumo.com
 import { RubroProductoComponent } from './components/rubro-producto/rubro-producto.component';
 import { RubroInsumoAdminComponent } from './components/admin/rubro-insumo-admin/rubro-insumo-admin.component';
 import { RubroProductoAdminComponent } from './components/admin/rubro-producto-admin/rubro-producto-admin.component';
+import { PlatosComponent } from './components/platos/platos.component';
+import { DetallePlatoComponent } from './components/detalle-plato/detalle-plato.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { ItemPlatoComponent } from './components/item-plato/item-plato.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { RubroProductoAdminComponent } from './components/admin/rubro-producto-a
     RubroProductoComponent,
     RubroInsumoAdminComponent,
     RubroProductoAdminComponent,
+    PlatosComponent,
+    DetallePlatoComponent,
+    BuscadorComponent,
+    ItemPlatoComponent,
   ],
   imports: [
     BrowserModule,
