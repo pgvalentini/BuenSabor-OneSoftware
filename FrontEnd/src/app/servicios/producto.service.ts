@@ -28,6 +28,12 @@ export class ProductoService {
         map( (productoData: any) => productoData));
     }
 
+    getProductoXTermino(terminoProducto: string){
+      console.log(`${this.url}/producto/buscar/${terminoProducto}`);
+      return this.http.get(`${this.url}/producto/buscar/${terminoProducto}`).pipe(
+        map( (productoData: any) => productoData));
+    }
+
     setProducto(producto:producto){
       return this.http.post(`${this.url}/producto`,producto);
     }

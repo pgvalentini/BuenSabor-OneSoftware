@@ -20,7 +20,7 @@ export class BuscadorComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(params => {
       this.termino = params['termino'];
-      this.servicioProducto.getProductoBusquedaFromDataBase(this.termino)
+      this.servicioProducto.getProductoXTermino(this.termino)
         .subscribe(data => {
           this.platosBusqueda = [];
           for (let inst in data) {
